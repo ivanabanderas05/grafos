@@ -1,12 +1,12 @@
 import grafos as gf
-from queue import Queue
+from queue import LifoQueue
 
 grafo = gf.grafo
 
 
-def BFS(grafo, Vinicio, Vfinal):
+def DFS(grafo, Vinicio, Vfinal):
     
-    frontier = Queue() 
+    frontier = LifoQueue() 
     frontier.put(Vinicio)
     
     #en vez de una lista se usó en diccionario para ver las naciones exploradas para manejarlo por nombres (de naciones) y no por posiciones, ya que sigue la misma logica de las siguientes instrucciones y sería mas facil manejarlo
@@ -36,8 +36,8 @@ def BFS(grafo, Vinicio, Vfinal):
                 
 
 
-print("Camino BFS de Goding a Naphia: ", BFS(grafo, "Goding", "Niaphia"), "\n") #Imprime el camino de Goding hasta Niaphia
-print("Camino BFS de Zrusall a Blebus: ",BFS(grafo, "Zrusall", "Blebus"), "\n")
-print("Camino BFS de Lagos a Goding: ",BFS(grafo, "Lagos", "Goding"), "\n")
-print("Camino BFS de Goxmont a Ontdale: ",BFS(grafo, "Goxmont", "Ontdale"), "\n")
+print("Camino DFS de Goding a Naphia: ", DFS(grafo, "Goding", "Niaphia"), "\n") #Imprime el camino de Goding hasta Niaphia
+print("Camino DFS de Zrusall a Blebus: ",DFS(grafo, "Zrusall", "Blebus"), "\n")
+print("Camino DFS de Lagos a Goding: ",DFS(grafo, "Lagos", "Goding"), "\n")
+print("Camino DFS de Goxmont a Ontdale: ",DFS(grafo, "Goxmont", "Ontdale"), "\n")
         

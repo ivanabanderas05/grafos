@@ -1,4 +1,6 @@
 from queue import PriorityQueue
+
+
 grafo = {
     'Ylane': {'Strento':99, 'Oriaron':117, 'Goding':88 },
     'Strento': {'Ylane':99, 'Zrusall':121, 'Oriaron':221},
